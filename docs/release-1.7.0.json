@@ -1,0 +1,28 @@
+{
+  "version": "1.7.0",
+  "platform": "Windows x64",
+  "file": "Qidu-Reader-1.7.0-Windows.exe",
+  "bytes": 93395827,
+  "sha256": "10eafc94ff260a6442aff6207d39ec094d8b39bef27e06f109ab2b2554a087a6",
+  "unitTests": 117,
+  "readingUpgradeDevelopmentChecks": 9,
+  "readingUpgradePackagedChecks": 9,
+  "downloadRegressionChecks": 11,
+  "resourceDevelopmentChecks": 14,
+  "resourcePackagedChecks": 14,
+  "localCacheDevelopmentChecks": 8,
+  "packagedChecks": 6,
+  "archiveExtraction": true,
+  "archiveFormats": [
+    "ZIP",
+    "RAR",
+    "7Z"
+  ],
+  "readableOutputs": [
+    "TXT",
+    "EPUB",
+    "PDF"
+  ],
+  "archiveEngine": "7-Zip 26.05",
+  "verification": "自行生成的归档与书籍、受控分享页、隔离资料目录；包含发布版原生解压、磁盘替换、章节跳转与重启验证"
+}

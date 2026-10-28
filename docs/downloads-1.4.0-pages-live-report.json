@@ -1,0 +1,58 @@
+{
+  "checkedAt": "2026-10-23T11:54:05.115Z",
+  "packaged": false,
+  "passed": true,
+  "providers": [
+    {
+      "name": "书格",
+      "query": "红楼梦",
+      "count": 7,
+      "titles": [
+        "红楼梦图咏",
+        "红楼梦赋图册",
+        "聊斋故事画册",
+        "金瓶梅词话",
+        "闲情小录",
+        "分门纂类唐宋时贤千家诗选",
+        "节孝事实图"
+      ],
+      "files": [],
+      "pages": [
+        "下载链接s.shuge.org"
+      ],
+      "message": [
+        "此页提供中转下载页面，可继续在下方读取。"
+      ],
+      "gateway": {
+        "files": [],
+        "pages": [],
+        "message": [
+          "目录暂时无法读取（HTTP 404）"
+        ]
+      }
+    },
+    {
+      "name": "中文维基文库",
+      "query": "红楼梦",
+      "count": 1,
+      "titles": [
+        "红楼梦"
+      ],
+      "files": [],
+      "pages": [
+        "下载为EPUBws-export.wmcloud.org",
+        "下载为PDFws-export.wmcloud.org",
+        "脂砚斋重评石头记庚辰本（八十回本）zh.wikisource.org",
+        "列藏本zh.wikisource.org",
+        "戚序本zh.wikisource.org",
+        "东观阁本 绣像红楼梦 程甲本 新增批评（一百二十回本）zh.wikisource.org"
+      ],
+      "message": [
+        "此页提供中转下载页面，可继续在下方读取。"
+      ]
+    }
+  ],
+  "download": null,
+  "errors": [],
+  "externalCalls": []
+}

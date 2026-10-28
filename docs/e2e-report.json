@@ -1,0 +1,22 @@
+{
+  "passed": 16,
+  "checks": [
+    "fresh desktop startup and six clearly labeled sample guides",
+    "search, status filters and grid/list layouts",
+    "text reading, chapter navigation, themes, font size, bookmarks, highlights and focus mode",
+    "private review creation and saved highlight/bookmark lists",
+    "custom book collection and membership",
+    "batch import of TXT, EPUB, PDF, HTML and Markdown",
+    "SHA-256 duplicate import detection",
+    "imported Chinese text chapters and full-text search",
+    "sanitized HTML and formatted Markdown reading",
+    "PDF canvas/text layer rendering, pagination, page jump and search",
+    "sandboxed EPUB layout, page turn, table of contents and full-text search",
+    "desktop URL fetching and offline sanitized article reading",
+    "restart persistence of files, progress, reviews, notes and reader preferences",
+    "appearance preferences and reading goals",
+    "full backup download, book removal and confirmed atomic restore",
+    "no renderer runtime errors across all workflows"
+  ],
+  "errors": []
+}

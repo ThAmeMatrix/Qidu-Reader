@@ -1,0 +1,21 @@
+{
+  "version": "1.5.1",
+  "platform": "Windows x64",
+  "file": "Qidu-Reader-1.5.1-Windows.exe",
+  "bytes": 91052431,
+  "sha256": "90d5d145b2984034bbb1ae65a5b890cbe2c7266c1a6f8bb1c1e8400c8722c4e1",
+  "unitTests": 91,
+  "resourceDevelopmentChecks": 14,
+  "resourcePackagedChecks": 14,
+  "downloadRegressionChecks": 11,
+  "packagedChecks": 6,
+  "downloadFormats": [
+    "EPUB",
+    "PDF",
+    "TXT",
+    "ZIP",
+    "RAR",
+    "7Z"
+  ],
+  "archiveExtraction": false
+}

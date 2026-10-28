@@ -1,0 +1,16 @@
+{
+  "passed": true,
+  "checks": [
+    "protected search is identified as login, not empty results",
+    "site-window HttpOnly login is reused by search and pagination through Chromium",
+    "automatic rendering lets the website authenticate its own API and returns the loaded results",
+    "temporary rendering windows are cleaned up after search",
+    "homepage recommendations are not mislabeled as search results",
+    "browser rendering reports challenges without claiming search success",
+    "POST searches use the original form context and keep hidden fields out of snapshots",
+    "session transport still rejects unsafe redirects",
+    "session cookies set on redirect responses are retained",
+    "login survives app restart for direct and dynamic searches"
+  ],
+  "errors": []
+}

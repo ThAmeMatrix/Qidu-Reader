@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-10-26T04:22:32.692Z",
+  "results": [
+    {
+      "request": {
+        "url": "https://baike.baidu.com/item/%E7%BA%A2%E6%A5%BC%E6%A2%A6"
+      },
+      "url": "https://baike.baidu.com/item/%E7%BA%A2%E6%A5%BC%E6%A2%A6",
+      "status": 200,
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 521386,
+      "title": "红楼梦（清代作家曹雪芹所著小说）_百度百科",
+      "preview": "网页新闻贴吧知道网盘图片视频地图文库资讯采购百科百度首页登录注册进入词条全站搜索帮助首页秒懂百科特色百科知识专题加入百科百科团队权威合作个人中心收藏查看我的收藏0有用+10红楼梦[hóng lóu mèng]播报讨论上传视频清代作家曹雪芹所著小说展开141个同名词条《红楼梦》，中国古典四大名著之首，清代作家曹雪芹创作的章回体长篇小说 [1]，又名《石头记》《金玉缘》《脂砚斋重评石头记》。此书有120回“程本”和80回“脂本”两种版本系统。新版通行本前八十回据脂本汇校，后四十回据程本汇校，署名“曹雪芹著，无名氏续，程伟元、高鹗整理” [2]。《红楼梦》是一部具有世界影响力的人情小说作品 [3]，举世公认的中国古典小说巅峰之作，中国封建社会的百科全书，传统文化的集大成者。小说以贾、史、王、薛四大家族的兴衰为背景，以贾府的家庭琐事、闺阁闲情为脉络，以贾宝玉、林黛玉、薛宝钗的爱情婚姻故事为主线，刻画了以贾宝玉和金陵十二钗为中心的正邪两赋有情人的人性美和悲剧美。通过家族悲剧、女儿悲剧及主人公的人生悲剧，揭示出封建末世的危机 [4]。《红楼梦》的作者具有初步的民主主义思想，他对现实社会包括宫廷及官场的黑暗、封建贵族阶级及其家庭的腐朽，封建的科举制度、婚姻制度、奴婢制度、等级制度，以及与此相适应的社会统治思想即孔孟之道和程朱理学、社会道德观念等，都进行了深刻的批判，并提出了朦胧的带有初步民主主义"
+    },
+    {
+      "request": {
+        "url": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E7%B4%85%E6%A8%93%E5%A4%A2"
+      },
+      "url": "https://zh.wikipedia.org/api/rest_v1/page/summary/%E7%B4%85%E6%A8%93%E5%A4%A2",
+      "status": 200,
+      "contentType": "application/json; charset=utf-8; profile=\"https://www.mediawiki.org/wiki/Specs/Summary/1.5.0\"",
+      "bytes": 2130,
+      "title": "",
+      "preview": "{\"type\":\"standard\",\"title\":\"红楼梦\",\"displaytitle\":\"红楼梦\",\"namespace\":{\"id\":0,\"text\":\"\"},\"wikibase_item\":\"Q8265\",\"titles\":{\"canonical\":\"红楼梦\",\"normalized\":\"红楼梦\",\"display\":\"红楼梦\"},\"pageid\":7469,\"thumbnail\":{\"source\":\"https://thumb.wikimedia.org/wikipedia/commons/thumb/0/0f/JiaXu01.jpg/330px-JiaXu01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail\",\"width\":330,\"height\":597},\"originalimage\":{\"source\":\"https://upload.wikimedia.org/wikipedia/commons/0/0f/JiaXu01.jpg?utm_source=zh.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled\",\"width\":420,\"height\":760},\"lang\":\"zh\",\"di"
+    },
+    {
+      "request": {
+        "url": "https://www.bing.com/search?format=rss&q=site%3Abaike.baidu.com%2Fitem%2F%20%E7%BA%A2%E6%A5%BC%E6%A2%A6%20%E6%9B%B9%E9%9B%AA%E8%8A%B9"
+      },
+      "url": "https://www.bing.com/search?format=rss&q=site%3Abaike.baidu.com%2Fitem%2F%20%E7%BA%A2%E6%A5%BC%E6%A2%A6%20%E6%9B%B9%E9%9B%AA%E8%8A%B9",
+      "status": 200,
+      "contentType": "text/xml; charset=utf-8",
+      "bytes": 741,
+      "title": "必应：site:baike.baidu.com/item/ 红楼梦 曹雪芹",
+      "preview": "必应：site:baike.baidu.com/item/ 红楼梦 曹雪芹http://www.bing.com:80/search?q=site%3abaike.baidu.com%2fitem%2f+%e7%ba%a2%e6%a5%bc%e6%a2%a6+%e6%9b%b9%e9%9b%aa%e8%8a%b9搜索结果http://www.bing.com:80/s/a/rsslogo.gifsite:baike.baidu.com/item/ 红楼梦 曹雪芹http://www.bing.com:80/search?q=site%3abaike.baidu.com%2fitem%2f+%e7%ba%a2%e6%a5%bc%e6%a2%a6+%e6%9b%b9%e9%9b%aa%e8%8a%b9版权所有 © 2026 Microsoft。保留所有权利。不得以任何方式或出于任何目的使用、复制或传输这些 XML 结果，除非出于个人的非商业用途在 RSS 聚合器中呈现必应结果。对这些结果的任何其他使用都需要获得 Microsoft Corporation 的明确书面许可。一经访问此网页或以任何方式使用这些结果，即表示您同意受上述限制的约束。"
+    },
+    {
+      "inAppOverview": "更新概述\n\n来源：百度百科、维基百科。请结合作者核对同名作品。\n\n红楼梦\n百度百科\n红楼梦\n维基百科\n红楼梦\n\n《红楼梦》，别名《石头记》，中国古代章回体长篇小说，中国古典四大名著之一。其通行本共120回，前80回为清代作家曹雪芹所著，后40回为无名氏续，整理者为程伟元、高鹗 [23] [44]。内容简介：小说以贾、史、王、薛四大家族兴衰为背景，以贾宝玉、林黛玉的爱情悲剧为主线，通过荣宁二府的日常图景，展现封建贵族的生活百态与内在危机。 [49]角色介绍：贾宝玉，背离科举仕途，富有鲜明时代特征的贵族青年叛逆者。林黛玉，寄居贾府，集美质与不幸于一身的绝代佳人。薛宝钗，端庄持重，恪守封建礼教。 [49-51]作品特点：小说以家族日常叙事承载时代风貌，人物刻画立体鲜活，突破传统小说叙事范式，兼具思想深度与艺术表现力，被学界视为中国古典小说现实主义创作的代表性作品。 [49]作品影响：该作催生了专门研究领域 “红学”，衍生覆盖戏曲、影视、舞剧等多种艺术形式。 [49]\n\n百度百科 · 2026/10/26\n查看来源词条"
+    }
+  ]
+}

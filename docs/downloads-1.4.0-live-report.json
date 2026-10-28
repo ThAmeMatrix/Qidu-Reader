@@ -1,0 +1,168 @@
+{
+  "checkedAt": "2026-10-23T11:45:20.573Z",
+  "packaged": false,
+  "passed": true,
+  "providers": [
+    {
+      "name": "Project Gutenberg",
+      "query": "紅樓夢",
+      "count": 1,
+      "titles": [
+        "紅樓夢 (Chinese)"
+      ],
+      "files": [
+        "EPUBEPUB3 ★ Recommended for most devices!1.2 MB下载",
+        "TXTPlain Text2.5 MB下载",
+        "EPUBEPUB (older e-readers)1.1 MB下载"
+      ],
+      "pages": [],
+      "message": []
+    },
+    {
+      "name": "Internet Archive",
+      "query": "红楼梦",
+      "count": 10,
+      "titles": [
+        "红楼梦 上 下",
+        "廿六版红楼梦",
+        "《红楼梦》通行本 简体横排 pdf, epub, txt, doc 文件",
+        "红楼梦之花袭人准姨娘上位记",
+        "红楼梦 上",
+        "《红楼梦》的隐写密码：分身、互文、原型与末世寓言",
+        "圣黛：当孙悟空穿越到红楼梦",
+        "红楼梦",
+        "《红楼梦》的真结局",
+        "《红楼梦》脂评汇校本 曹雪芹著 吳铭恩汇校 简体横排"
+      ],
+      "files": [
+        "EPUB红楼梦 曹雪芹.epub2.9 MB下载",
+        "PDF红楼梦 曹雪芹.pdf46.7 MB下载",
+        "TXT红楼梦 曹雪芹_djvu.txt3.8 MB下载",
+        "PDF红楼梦 曹雪芹_text.pdf79.1 MB下载"
+      ],
+      "pages": [],
+      "message": []
+    },
+    {
+      "name": "Standard Ebooks",
+      "query": "Alice",
+      "count": 12,
+      "titles": [
+        "Alice’s Adventures in Wonderland",
+        "Short Fiction",
+        "Through the Looking-Glass",
+        "Alice Adams",
+        "Short Fiction",
+        "Key Out of Time",
+        "The Defiant Agents",
+        "Storm Over Warlock",
+        "The Time Traders",
+        "Plague Ship",
+        "Star Born",
+        "Star Hunter"
+      ],
+      "files": [
+        "EPUBCompatible epub下载",
+        "EPUBkepub下载",
+        "EPUBAdvanced epub下载"
+      ],
+      "pages": [
+        "azw3standardebooks.org",
+        "Kindle cover thumbnailstandardebooks.org",
+        "Kindle does not natively support epub.standardebooks.org"
+      ],
+      "message": []
+    },
+    {
+      "name": "书格",
+      "query": "红楼梦",
+      "count": 0,
+      "titles": [],
+      "files": [],
+      "pages": [],
+      "message": [
+        "暂未识别到搜索结果，页面可能需要动态加载、登录或自定义解析规则"
+      ]
+    },
+    {
+      "name": "必应",
+      "query": "红楼梦",
+      "count": 9,
+      "titles": [
+        "红楼梦（清代作家曹雪芹所著小说）_百度百科",
+        "红楼梦全文_古文岛_原古诗文网",
+        "红楼梦 - 维基百科，自由的百科全书",
+        "《红楼梦》小说原文全集在线阅读",
+        "《红楼梦》全文在线阅读_原文｜曹雪芹 - 墨书院",
+        "红楼梦 - 维基文库，自由的图书馆",
+        "红楼梦（87版）_CCTV节目官网-电视剧_央视网 (cctv.com)",
+        "红楼梦第1集-电视剧-全集-高清正版在线观看-bilibili-哔哩哔哩",
+        "红楼梦_曹雪芹_在线阅读_中华典藏"
+      ],
+      "files": [],
+      "pages": [
+        "网盘pan.baidu.com"
+      ],
+      "message": [
+        "此页提供中转下载页面，可继续在下方读取。"
+      ]
+    },
+    {
+      "name": "百度",
+      "query": "红楼梦",
+      "count": 9,
+      "titles": [
+        "哪里能下载《红楼梦》电子书网盘资源",
+        "红楼梦txt免费下载小说 电子书 全本 - 智能分身实时回复",
+        "红楼梦电子书完整版网盘链接下载",
+        "求红楼梦电子书完整版免费下载网盘链接获取",
+        "红楼梦曹雪芹【电子书下载吧】 - 百度贴吧",
+        "红楼梦 - 在线全文阅读正版",
+        "红楼梦全集TXT下载_红楼梦下载_红楼梦最新章节_[清]曹雪芹,[清]高鹗_历史小说",
+        "红楼梦(全集)txt下载全本_《红楼梦(全集)》最新章节在线阅读_全文完结免费无删减 - 潇湘书院",
+        "红楼梦(全集)txt全集下载_《红楼梦(全集)》最新章节在线阅读_全文完结免费无删减 - 潇湘书院"
+      ],
+      "files": [],
+      "pages": [
+        "https://pan.baidu.com/s/1wxVTk9quGe1DuKG5KbD9qA?pwd=uiwjpan.baidu.com",
+        "原版《红楼梦》电子书txt全集下载 6zhidao.baidu.com",
+        "求《红楼梦》原著txt下载zhidao.baidu.com"
+      ],
+      "message": [
+        "此页提供中转下载页面，可继续在下方读取。"
+      ]
+    },
+    {
+      "name": "Google",
+      "query": "红楼梦",
+      "count": 0,
+      "titles": [],
+      "files": [],
+      "pages": [],
+      "message": [
+        "站点响应超时，请稍后重试或打开站点窗口"
+      ]
+    },
+    {
+      "name": "中文维基文库",
+      "query": "红楼梦",
+      "count": 0,
+      "titles": [],
+      "files": [],
+      "pages": [],
+      "message": [
+        "暂未识别到搜索结果，页面可能需要动态加载、登录或自定义解析规则"
+      ]
+    }
+  ],
+  "download": {
+    "format": "EPUB",
+    "name": "EPUB3 ★ Recommended for most devices!.epub",
+    "bytes": 1228855,
+    "status": "completed",
+    "url": "https://www.gutenberg.org/ebooks/24264.epub3.images",
+    "imported": true
+  },
+  "errors": [],
+  "externalCalls": []
+}

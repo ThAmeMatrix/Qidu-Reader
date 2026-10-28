@@ -1,0 +1,16 @@
+import {useEffect,useRef,useState} from 'react';
+import {BookOpen,ExternalLink,LoaderCircle,Search} from 'lucide-react';
+import {lookupEncyclopedia,readEncyclopediaCache,saveEncyclopediaCache,type EncyclopediaResult} from '../lib/encyclopedia';
+export function EncyclopediaPanel({title,author}:{title:string;author:string}){
+ const [open,setOpen]=useState(false),[keyword,setKeyword]=useState(title),[result,setResult]=useState<EncyclopediaResult>(),[busy,setBusy]=useState(false),[error,setError]=useState(''),[selected,setSelected]=useState(0);
+ const controller=useRef<AbortController|undefined>(undefined),sequence=useRef(0);
+ async function load(query:string,refresh=false){
+  const key=query.trim()+'|'+author,id=++sequence.current;controller.current?.abort();controller.current=new AbortController();setError('');setSelected(0);
+  const cached=!refresh&&readEncyclopediaCache(key);if(cached){setResult(cached);setBusy(false);return;}
+  setResult(undefined);setBusy(true);
+  try{const next=await lookupEncyclopedia(query,author,controller.current.signal);if(sequence.current===id){setResult(next);saveEncyclopediaCache(key,next);}}catch(e){if(sequence.current===id)setError((e as Error).message);}finally{if(sequence.current===id)setBusy(false);}
+ }
+ useEffect(()=>{setKeyword(title);if(open)void load(title);return()=>{sequence.current++;controller.current?.abort();};},[title,author,open]);
+ const entry=result?.entries[selected];
+ return <section className="encyclopedia-panel"><button className="encyclopedia-toggle" aria-expanded={open} onClick={()=>setOpen(!open)}><BookOpen size={17}/>百科概述<span>{open?'收起':'查看作品背景与简介'}</span></button>{open&&<div className="encyclopedia-content"><form onSubmit={e=>{e.preventDefault();void load(keyword,true);}}><input aria-label="百科查询关键词" className="form-input" value={keyword} onChange={e=>setKeyword(e.target.value)} maxLength={150}/><button className="button secondary small" disabled={busy||!keyword.trim()}>{busy?<LoaderCircle size={14} className="spin"/>:<Search size={14}/>}更新概述</button></form><p className="download-caption">来源：百度百科、维基百科。请结合作者核对同名作品。</p>{busy&&<p role="status">正在查找百科概述…</p>}{error&&<p role="status">{error}</p>}{!!result?.entries.length&&<><div className="encyclopedia-choices">{result.entries.map((item,i)=><button key={item.source+item.url} className={i===selected?'selected':''} aria-pressed={i===selected} onClick={()=>setSelected(i)}>{item.title}<small>{item.source}</small></button>)}</div>{entry&&<article><h3>{entry.title}</h3>{entry.description&&<small>{entry.description}</small>}<p className="encyclopedia-summary">{entry.summary}</p><div className="encyclopedia-attribution"><span>{entry.source} · {new Date(entry.fetchedAt).toLocaleDateString('zh-CN')}</span><button className="button text-button small" onClick={()=>void (window.desktop?.openExternal(entry.url)||Promise.resolve(window.open(entry.url,'_blank','noopener'))).catch(e=>setError((e as Error).message))}>查看来源词条<ExternalLink size={12}/></button></div></article>}</>}{result&&!result.entries.length&&<p>暂未取得概述，可修改关键词或稍后重试。</p>}{!!result?.errors.length&&<details className="encyclopedia-errors"><summary>来源状态</summary>{result.errors.map(text=><p key={text}>{text}</p>)}</details>}</div>}</section>;
+}

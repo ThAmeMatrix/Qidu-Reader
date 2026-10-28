@@ -1,0 +1,123 @@
+{
+  "checks": [
+    "Baidu pwd glued to an archive password is cleaned before opening; magnets and torrent links remain recognized",
+    "sandboxed cloud window fills the extraction code and keeps the authenticated session",
+    "current cloud page returns file links to its in-app resource card",
+    "native POST download retains cookies and ticket, validates bytes and imports the EPUB",
+    "browser-generated blob downloads are captured without a separate browser",
+    "native downloads can be cancelled and reopened with their share code retained",
+    "installer downloads are still rejected",
+    "cloud ZIP downloads are captured, saved byte-for-byte and kept out of direct book import",
+    "magnet file selection downloads the chosen ebook through aria2 and imports it",
+    "archive filters apply to page links and torrent files; ZIP, RAR and 7Z transfer real bytes",
+    "extensionless archive downloads are recognized from response headers",
+    "torrent metadata inspection can be cancelled from the resource card",
+    "pasted sharing text and compact layout work without external app handoffs",
+    "completed files, imported book and cached torrent metadata survive restart"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "path": "/resources",
+      "method": "GET"
+    },
+    {
+      "path": "/locked",
+      "method": "GET"
+    },
+    {
+      "path": "/unlock",
+      "method": "POST"
+    },
+    {
+      "path": "/shared",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/post-download",
+      "method": "POST",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/slow.txt",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/locked",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/unlock",
+      "method": "POST",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/shared",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/unsupported.exe",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/cloud-archive",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/book.torrent",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/seed/Qidu%20books/books.zip",
+      "method": "GET"
+    },
+    {
+      "path": "/seed/Qidu%20books/%E7%A3%81%E9%93%BE%E6%B5%8B%E8%AF%95.txt",
+      "method": "GET"
+    },
+    {
+      "path": "/seed/Qidu%20books/second.txt",
+      "method": "GET"
+    },
+    {
+      "path": "/seed/Qidu%20books/setup.exe",
+      "method": "GET"
+    },
+    {
+      "path": "/seed/Qidu%20books/books.zip",
+      "method": "GET"
+    },
+    {
+      "path": "/seed/Qidu%20books/%E7%A3%81%E9%93%BE%E6%B5%8B%E8%AF%95.txt",
+      "method": "GET"
+    },
+    {
+      "path": "/archives/book.rar",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/archives/book.7z",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/archive-gateway",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    },
+    {
+      "path": "/stall.torrent",
+      "method": "GET",
+      "cookie": "share_fixture=allowed"
+    }
+  ],
+  "packaged": false
+}

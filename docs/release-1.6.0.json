@@ -1,0 +1,21 @@
+{
+  "version": "1.6.0",
+  "platform": "Windows x64",
+  "file": "Qidu-Reader-1.6.0-Windows.exe",
+  "bytes": 91058962,
+  "sha256": "44e7defd6c9f7de730c9f379a3a79cbcfaad36c31304beebb4262028b78c2f0a",
+  "unitTests": 105,
+  "localCacheDevelopmentChecks": 8,
+  "localCachePackagedChecks": 8,
+  "downloadRegressionChecks": 11,
+  "resourceRegressionChecks": 14,
+  "searchSessionChecks": 10,
+  "discoveryChecks": 8,
+  "packagedChecks": 6,
+  "encyclopediaLiveCheck": [
+    "百度百科：红楼梦",
+    "维基百科：红楼梦"
+  ],
+  "cloudVerification": "受控分享页面、真实 Chromium POST 下载与磁盘读写；未使用个人百度网盘账号或真实分享验证",
+  "archiveExtraction": false
+}

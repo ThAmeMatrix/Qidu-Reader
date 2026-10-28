@@ -1,0 +1,14 @@
+{
+  "passed": true,
+  "checks": [
+    "shelf favorite toggles off and immediately leaves favorites filter",
+    "bookmark click, Ctrl+D and sidebar removal all toggle correctly",
+    "custom CSS source, parser preview, safe search and pagination",
+    "online favorites toggle and details refresh from the source",
+    "online books open details, and search survives navigation",
+    "late responses cannot overwrite a newer search",
+    "sandboxed site window renders JavaScript and returns parsed books to the app",
+    "restart persists favorite removal, online books, source settings and source deletion"
+  ],
+  "errors": []
+}

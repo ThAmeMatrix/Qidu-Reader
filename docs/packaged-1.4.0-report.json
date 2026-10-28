@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "Packaged ASAR startup",
+    "Isolated renderer",
+    "Minimum window size",
+    "Discovery and source management at minimum size",
+    "Local PDF worker and font assets",
+    "EPUB archive and sandbox rendering"
+  ],
+  "errors": []
+}

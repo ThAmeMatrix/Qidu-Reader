@@ -1,0 +1,109 @@
+{
+  "checkedAt": "2026-10-23T05:37:27.662Z",
+  "results": [
+    {
+      "name": "起点中文网",
+      "id": "qidian",
+      "query": "剑",
+      "status": 202,
+      "count": 0,
+      "hasNext": false,
+      "needsBrowser": true,
+      "message": "站点需要验证或暂时限制访问，请在站点窗口查看",
+      "examples": []
+    },
+    {
+      "name": "纵横中文网",
+      "id": "zongheng",
+      "query": "剑",
+      "status": 200,
+      "count": 20,
+      "hasNext": true,
+      "needsBrowser": false,
+      "message": "",
+      "examples": [
+        {
+          "title": "莲剑凡尘",
+          "author": "孟若云",
+          "url": "https://book.zongheng.com/book/1411801.html"
+        },
+        {
+          "title": "剑歌行",
+          "author": "七辛海棠",
+          "url": "https://book.zongheng.com/book/1272413.html"
+        }
+      ],
+      "detail": {
+        "title": "莲剑凡尘",
+        "author": "孟若云",
+        "hasDescription": true,
+        "hasCover": true
+      },
+      "secondPageCount": 20,
+      "secondPageDiffers": true
+    },
+    {
+      "name": "国家图书馆",
+      "id": "nlc",
+      "query": "红楼梦",
+      "status": 200,
+      "count": 10,
+      "hasNext": true,
+      "needsBrowser": false,
+      "message": "",
+      "examples": [
+        {
+          "title": "红楼梦",
+          "author": "曹雪芹",
+          "url": "http://find.nlc.cn/search/showDocDetails?docId=-3448189444235920202&dataSource=ucs01&query=%E7%BA%A2%E6%A5%BC%E6%A2%A6"
+        },
+        {
+          "title": "红楼梦",
+          "author": "徐进",
+          "url": "http://find.nlc.cn/search/showDocDetails?docId=3655295050221844720&dataSource=ucs01&query=%E7%BA%A2%E6%A5%BC%E6%A2%A6"
+        }
+      ],
+      "detail": {
+        "title": "红楼梦",
+        "author": "曹雪芹",
+        "hasDescription": false,
+        "hasCover": false
+      },
+      "secondPageCount": 10,
+      "secondPageDiffers": true
+    },
+    {
+      "name": "Novelia",
+      "id": "novelia",
+      "query": "剑",
+      "status": 200,
+      "count": 0,
+      "hasNext": false,
+      "needsBrowser": true,
+      "message": "当前页面尚未识别到书目。可打开站点窗口，完成搜索后读取当前页",
+      "examples": []
+    },
+    {
+      "name": "哔哩轻小说",
+      "id": "linovelib",
+      "query": "剑",
+      "status": 200,
+      "count": 0,
+      "hasNext": false,
+      "needsBrowser": true,
+      "message": "站点没有返回可解析的内容，请在站点窗口搜索后读取",
+      "examples": []
+    },
+    {
+      "name": "优书网",
+      "id": "youshu",
+      "query": "剑",
+      "status": 200,
+      "count": 0,
+      "hasNext": false,
+      "needsBrowser": true,
+      "message": "搜索需要登录，请打开站点窗口登录后读取结果",
+      "examples": []
+    }
+  ]
+}

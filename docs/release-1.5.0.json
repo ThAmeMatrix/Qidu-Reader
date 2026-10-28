@@ -1,0 +1,15 @@
+{
+  "version": "1.5.0",
+  "platform": "Windows x64",
+  "file": "Qidu-Reader-1.5.0-Windows.exe",
+  "bytes": 91052072,
+  "sha256": "df153f25871f8adfb6422032a34a84e0bf01651ce8bd86b03b2c66ed9e8b317e",
+  "unitTests": 86,
+  "resourcesPackagedChecks": 11,
+  "downloadChecks": 11,
+  "sessionChecks": 10,
+  "discoveryPackagedChecks": 8,
+  "packagedChecks": 6,
+  "engine": "aria2 1.37.0",
+  "engineAssetsVerified": true
+}

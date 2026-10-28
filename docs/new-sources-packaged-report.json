@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "checks": [
+    "new built-ins are visible and Fanqie reads linkless web results after direct API failure",
+    "manual website pagination returns the current page book IDs and metadata",
+    "an HTTP 200 empty response is reported as unavailable instead of no matches",
+    "a valid empty JSON response is reported as no matches",
+    "Youshu public-index action opens the exact submitted query without changing its source",
+    "deleted new sources and disabled states survive app restart"
+  ],
+  "errors": []
+}

@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "right-corner theme switch changes day/night immediately",
+    "ZIP, RAR and 7Z automatically replace the same work with extracted TXT and delete obsolete files",
+    "completed download opens directly and auto-detected chapter navigation works",
+    "night theme, extracted cache and chapter position survive restart",
+    "password failure retains the existing book; correct password extracts and opens it",
+    "EPUB missing its navigation document gets a chapter list from spine headings",
+    "PDF embedded outlines appear as navigable chapters",
+    "PDF without an outline detects chapter headings from its text",
+    "clearing an extracted resource physically deletes it and retains its favorite"
+  ],
+  "errors": [],
+  "packaged": false
+}

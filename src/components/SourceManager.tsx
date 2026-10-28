@@ -1,0 +1,43 @@
+import { useRef, useState } from 'react';
+import { Check, ChevronLeft, Download, Edit3, LoaderCircle, Plus, RotateCcw, Search, Trash2, Upload } from 'lucide-react';
+import type { BookSource, SourceSelectors } from '../types';
+import { defaultSources, migrateSources, searchSource, validateSource } from '../lib/sources';
+import { downloadBlob, IconButton, Modal } from './ui';
+
+export function SourceManager({ sources, onChange, onClose, notify }: { sources:BookSource[];onChange:(sources:BookSource[])=>void;onClose:()=>void;notify:(message:string)=>void }) {
+  const [editing,setEditing] = useState<BookSource>(); const [error,setError] = useState(''); const importInput=useRef<HTMLInputElement>(null);
+  const newSource = () => { setError('');setEditing({id:crypto.randomUUID(),name:'',homepage:'',searchUrl:'',method:'GET',charset:'auto',adapter:'generic',enabled:true}); };
+  async function importConfig(file?:File) {
+    if (!file) return; setError('');
+    try {
+      if (file.size>1024*1024) throw new Error('配置文件超过 1 MB'); const value:unknown=JSON.parse(await file.text());
+      if (!Array.isArray(value) || value.length>50) throw new Error('请导入最多包含 50 个站点的 JSON 数组');
+      value.forEach(validateSource); const merged=new Map(sources.map(s=>[s.id,s]));migrateSources(value).forEach(s=>merged.set(s.id,s));
+      if(merged.size>50) throw new Error('最多保存 50 个搜索站点');onChange([...merged.values()]);notify(`已导入 ${value.length} 个站点配置`);
+    }catch(e){setError((e as Error).message);}
+  }
+  return <Modal title={editing ? editing.name || '添加搜索站点' : '你的搜索站点'} subtitle={editing ? '填写网站自己的搜索地址，可按需要调整结果解析。' : '启用的站点将参与搜索。书籍资料和收藏独立保存在书架中。'} onClose={onClose} wide>
+    {editing ? <SourceEditor key={editing.id} source={editing} onBack={()=>setEditing(undefined)} onSave={source=>{const exists=sources.some(s=>s.id===source.id);if(!exists&&sources.length>=50){setError('最多保存 50 个搜索站点');return;}onChange(exists?sources.map(s=>s.id===source.id?source:s):[...sources,source]);setEditing(undefined);notify('站点配置已保存');}}/> : <><div className="source-manager-list">{sources.map(source=><div className="source-manager-row" key={source.id}><label className="source-enable"><input type="checkbox" aria-label={`启用 ${source.name}`} checked={source.enabled} onChange={e=>onChange(sources.map(s=>s.id===source.id?{...s,enabled:e.target.checked}:s))}/><span><strong>{source.name}<small>{source.builtin?'内置':'自定义'}</small></strong><em>{new URL(source.homepage).hostname}</em></span></label><IconButton label={`编辑 ${source.name}`} onClick={()=>{setError('');setEditing(structuredClone(source));}}><Edit3 size={16}/></IconButton><IconButton label={`删除站点 ${source.name}`} onClick={()=>{onChange(sources.filter(s=>s.id!==source.id));notify('站点已移除，书架中的书籍资料仍可查看');}}><Trash2 size={16}/></IconButton></div>)}</div><button className="button secondary full-width" disabled={sources.length>=50} onClick={newSource}><Plus size={17}/>添加搜索网站</button><div className="source-manager-footer"><button onClick={()=>{const missing=defaultSources.filter(s=>!sources.some(saved=>saved.id===s.id));onChange([...sources,...structuredClone(missing)].slice(0,50));notify(missing.length?'已补回缺少的内置站点':'内置站点均已保留');}}><RotateCcw size={14}/>补回内置站点</button><button onClick={()=>downloadBlob(new Blob([JSON.stringify(sources,null,2)],{type:'application/json'}),'栖读搜索站点.json')}><Download size={14}/>导出配置</button><button onClick={()=>importInput.current?.click()}><Upload size={14}/>导入配置</button><input hidden ref={importInput} type="file" accept=".json" aria-label="导入站点配置" onChange={e=>{void importConfig(e.target.files?.[0]);e.target.value='';}}/></div></>}
+    {error&&<div className="error-message" role="alert">{error}</div>}
+  </Modal>;
+}
+
+function SourceEditor({ source,onSave,onBack }: {source:BookSource;onSave:(s:BookSource)=>void;onBack:()=>void}) {
+  const [value,setValue]=useState(source);const [error,setError]=useState('');const [testQuery,setTestQuery]=useState('红楼梦');const [test,setTest]=useState('');const [testing,setTesting]=useState(false);
+  const patch=(change:Partial<BookSource>)=>{setValue(v=>({...v,...change}));setTest('');setError('');};
+  const selector=(key:keyof SourceSelectors,text:string)=>patch({selectors:{...value.selectors,[key]:text}});
+  async function testSource(){setError('');setTest('');try {validateSource(value);if(!testQuery.trim())throw new Error('请填写测试关键词');setTesting(true);const page=await searchSource(value,testQuery);setTest(page.books.length?`成功识别 ${page.books.length} 本：${page.books.slice(0,3).map(b=>b.title).join('、')}`:page.message||'没有找到结果');}catch(e){setError((e as Error).message);}finally{setTesting(false);}}
+  return <form className="source-editor" onSubmit={e=>{e.preventDefault();try{validateSource(value);onSave({...value,name:value.name.trim()});}catch(error){setError((error as Error).message);}}}>
+    <button type="button" className="source-editor-back" onClick={onBack}><ChevronLeft size={14}/>返回站点列表</button>
+    <div className="source-form-row"><label>站点名称<input className="form-input" data-autofocus value={value.name} onChange={e=>patch({name:e.target.value})} maxLength={60} required placeholder="例如：我的图书网站"/></label><label>网站主页<input className="form-input" value={value.homepage} onChange={e=>patch({homepage:e.target.value})} placeholder="https://example.com/" maxLength={4096} required/></label></div>
+    <label>搜索地址<input className="form-input" value={value.searchUrl} onChange={e=>patch({searchUrl:e.target.value})} placeholder="https://example.com/search?q={query}&page={page}" maxLength={4096} required/></label><p className="source-field-help">搜索词用 <code>{'{query}'}</code>；页码用 <code>{'{page}'}</code>（从 1 开始）或 <code>{'{page0}'}</code>（从 0 开始）。系统会自动编码中文。</p>
+    <label>搜索加载方式<select aria-label="搜索加载方式" className="form-input" value={value.searchMode || 'http'} onChange={e=>patch({searchMode:e.target.value as BookSource['searchMode']})}><option value="http">直接读取（复用登录状态）</option><option value="auto">自动（必要时加载网页）</option><option value="browser">加载动态网页（适用于网页登录站点）</option></select></label><p className="source-field-help">桌面版会记住站点窗口的登录状态。动态网页由原站完成登录和加载，无需填写密码或令牌。</p>
+    <label>站点窗口搜索地址（可选）<input className="form-input" value={value.browseUrl || ''} onChange={e=>patch({browseUrl:e.target.value || undefined})} placeholder="https://example.com/search?q={query}&page={page}" maxLength={4096}/></label>
+    <div className="source-form-row"><label>请求方式<select className="form-input" value={value.method} onChange={e=>patch({method:e.target.value as BookSource['method']})}><option>GET</option><option>POST</option></select></label><label>网页文字编码<select className="form-input" value={value.charset} onChange={e=>patch({charset:e.target.value as BookSource['charset']})}><option value="auto">自动识别</option><option value="utf-8">UTF-8</option><option value="gb18030">GBK / GB18030</option></select></label></div>
+    {value.method==='POST'&&<label>POST 表单参数<input className="form-input" value={value.body||''} onChange={e=>patch({body:e.target.value})} maxLength={8000} placeholder="searchkey={query}&page={page}"/></label>}
+    <details className="source-advanced" open={!!value.selectors?.item}><summary>高级解析规则</summary><label>解析方式<select className="form-input" value={value.adapter} onChange={e=>patch({adapter:e.target.value as BookSource['adapter']})}><option value="generic">自动识别常见书目链接</option>{defaultSources.map(s=><option key={s.id} value={s.adapter}>{s.name}适配器</option>)}</select></label><p className="source-field-help">可用 CSS 选择器指定搜索结果字段；留空使用默认规则。书名、链接等选择器相对于单条结果；用 :scope 表示条目本身。</p><div className="source-form-row">{([['item','结果条目','.result-item'],['title','书名','h3'],['link','详情链接','h3 a'],['author','作者','.author'],['cover','封面图片','img'],['description','简介','.intro'],['next','下一页链接','a.next']] as const).map(([key,label,placeholder])=><label key={key}>{label}<input className="form-input" value={value.selectors?.[key]||''} placeholder={placeholder} onChange={e=>selector(key,e.target.value)} maxLength={500}/></label>)}</div></details>
+    <div className="source-test"><input className="form-input" aria-label="测试搜索词" value={testQuery} onChange={e=>setTestQuery(e.target.value)} maxLength={100}/><button type="button" className="button secondary" disabled={testing} onClick={()=>void testSource()}>{testing?<LoaderCircle size={15} className="spin"/>:<Search size={15}/>}测试解析</button></div>{test&&<p className="source-test-result" role="status">{test}</p>}{error&&<div className="error-message" role="alert">{error}</div>}
+    <div className="modal-actions"><button type="button" className="button secondary" onClick={onBack}>取消</button><button className="button primary" disabled={testing}><Check size={16}/>保存站点</button></div>
+  </form>;
+}
+

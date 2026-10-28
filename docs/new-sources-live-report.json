@@ -1,0 +1,38 @@
+{
+  "checkedAt": "2026-10-23T08:31:46.104Z",
+  "ciweimao": {
+    "query": "魔女",
+    "first": 10,
+    "second": 10,
+    "distinct": true,
+    "example": {
+      "sourceId": "ciweimao",
+      "sourceName": "刺猬猫阅读",
+      "url": "https://www.ciweimao.com/book/100426233",
+      "title": "魔女大人，让我把你埋了！",
+      "author": "卡盟",
+      "coverUrl": "https://e1.kuangxiangit.com/uploads/allimg/c251202/02-12-25174232-26871.jpg"
+    },
+    "detail": {
+      "title": "魔女大人，让我把你埋了！",
+      "author": "卡盟",
+      "hasCover": true,
+      "hasDescription": true
+    },
+    "newBooksOnSecondPage": 9
+  },
+  "fanqie": {
+    "search": "HTTP 200 with empty body for both direct request and website request; unavailable, not verified working",
+    "detail": {
+      "title": "部族荣光",
+      "author": "丧狐",
+      "hasCover": true,
+      "hasDescription": true
+    }
+  },
+  "youshu": {
+    "search": "Anonymous public form redirects to login.php",
+    "legacySearch": "Homepage /search/all/?kw=... returns 404 Not Found",
+    "mobile": "Published mobile homepage redirects to www.youshu.me; no anonymous search found"
+  }
+}

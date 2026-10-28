@@ -1,0 +1,88 @@
+{
+  "checks": [
+    "百科概述在作品详情内展示双来源、正文和来源链接",
+    "多级页面自动进入网盘、提交提取码并暂停真实下载，等待用户加载",
+    "加载后按作品 ID 关联文件，保留收藏与进度且不生成重复书籍",
+    "收藏作品直接打开下载文件并进入本地阅读器",
+    "重启后离线阅读与百科缓存可用；清空缓存真实删除文件并保留书评、收藏和进度",
+    "清理后可以重新解析和加载，设置页也能删除对应文件",
+    "登录密码不会被当作提取码；用户完成登录后自动继续解析",
+    "再次重启不会复活已清理的缓存，整个流程无外部浏览器跳转"
+  ],
+  "errors": [],
+  "requests": [
+    {
+      "path": "/one",
+      "method": "GET"
+    },
+    {
+      "path": "/two",
+      "method": "GET"
+    },
+    {
+      "path": "/three",
+      "method": "GET"
+    },
+    {
+      "path": "/locked",
+      "method": "GET"
+    },
+    {
+      "path": "/unlock",
+      "method": "POST"
+    },
+    {
+      "path": "/shared",
+      "method": "GET"
+    },
+    {
+      "path": "/download",
+      "method": "POST"
+    },
+    {
+      "path": "/locked",
+      "method": "GET"
+    },
+    {
+      "path": "/unlock",
+      "method": "POST"
+    },
+    {
+      "path": "/shared",
+      "method": "GET"
+    },
+    {
+      "path": "/download",
+      "method": "POST"
+    },
+    {
+      "path": "/login",
+      "method": "GET"
+    },
+    {
+      "path": "/login",
+      "method": "GET"
+    },
+    {
+      "path": "/login-done",
+      "method": "POST"
+    },
+    {
+      "path": "/locked",
+      "method": "GET"
+    },
+    {
+      "path": "/unlock",
+      "method": "POST"
+    },
+    {
+      "path": "/shared",
+      "method": "GET"
+    },
+    {
+      "path": "/download",
+      "method": "POST"
+    }
+  ],
+  "packaged": true
+}

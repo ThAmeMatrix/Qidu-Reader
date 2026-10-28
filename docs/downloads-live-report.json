@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-10-23T09:40:55.515Z",
+  "packaged": false,
+  "passed": true,
+  "catalogs": [
+    {
+      "name": "Project Gutenberg",
+      "query": "紅樓夢",
+      "count": 1,
+      "files": [
+        "EPUBEPUB3 ★ Recommended for most devices!1.2 MB下载文件",
+        "TXTPlain Text2.5 MB下载文件",
+        "EPUBEPUB (older e-readers)1.1 MB下载文件"
+      ],
+      "fileUrl": "https://www.gutenberg.org/ebooks/24264.epub3.images",
+      "message": []
+    },
+    {
+      "name": "Internet Archive",
+      "query": "红楼梦",
+      "count": 10,
+      "files": [
+        "EPUB红楼梦(通行本)简体横排.epub2.1 MB下载文件",
+        "PDF红楼梦(通行本)简体横排.pdf6.5 MB下载文件",
+        "TXT红楼梦(通行本)简体横排_djvu.txt3.5 MB下载文件",
+        "TXT红楼梦.txt2.5 MB下载文件"
+      ],
+      "fileUrl": "https://archive.org/download/20210205_20210205_1123/%E7%BA%A2%E6%A5%BC%E6%A2%A6(%E9%80%9A%E8%A1%8C%E6%9C%AC)%E7%AE%80%E4%BD%93%E6%A8%AA%E6%8E%92.epub",
+      "message": []
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "packaged": false,
+  "checks": [
+    "local book details open an autofilled download finder with a single focused dialog",
+    "confirmed files filter by format and browser handoff uses the actual file URL and engine query",
+    "restricted entries expose no files and Gutenberg only offers formats present on its detail page",
+    "catalog pagination appends unique records while preserving inspected files",
+    "replaced and stopped searches cannot overwrite current results",
+    "upstream failures and valid empty results display different recovery messages",
+    "custom site CRUD, unsafe-link rejection, template preview, enable states and deletion undo work",
+    "minimum-size layout fits the viewport and closing returns to the original book details",
+    "discovery cards and online details both expose download lookup with the original-site option",
+    "custom, disabled and deleted download sites survive app restart"
+  ],
+  "errors": []
+}

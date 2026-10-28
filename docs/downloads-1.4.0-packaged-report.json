@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "packaged": true,
+  "checks": [
+    "catalog and search-engine results are aggregated inside a single focused dialog",
+    "catalog format filtering, restricted records and pagination retain inspected files",
+    "result pages and gateways resolve in app; extensionless PDF, TXT and EPUB transfer using the website session",
+    "all three formats import into the library, duplicate imports are skipped, and Save As preserves the bytes",
+    "progress, cancellation and retry work; HTML verification pages fail without producing a book",
+    "stale and stopped searches cannot replace results; upstream errors differ from valid empty searches",
+    "custom sites support in-app previews, CSS selectors, editing, enable states and deletion undo",
+    "manual page reading and minimum-size layout work with zero external-browser handoffs",
+    "downloaded EPUB opens in the reader; clearing a download leaves the imported book intact",
+    "found-book cards and online details open the same in-app finder with original-page access",
+    "download records, imported books and custom parsing settings survive a restart"
+  ],
+  "errors": []
+}
